@@ -12,7 +12,11 @@ import WalletConnectLogo from "../../assets/WalletConnectLogo.png";
 import "./Home.css";
 
 const Home = () => {
+  // Web3-react context provider
   const context = useWeb3React();
+
+  const { library, chainId, account, activate, deactivate, active, error } =
+    context;
 
   /**
    * @notice States
@@ -25,9 +29,6 @@ const Home = () => {
    */
   const openWalletModalHandler = () => setIsWalletModalOpen(true);
   const closeWalletModalHandler = () => setIsWalletModalOpen(false);
-
-  const { library, chainId, account, activate, deactivate, active, error } =
-    context;
 
   // ------------ Wallets -------------
 
@@ -56,12 +57,12 @@ const Home = () => {
     activate(walletConnectConnector);
   };
 
-  const formatAddress = (address: any) => {
-    if (account) {
-      return address.slice(0, 4) + "..." + address.slice(-4);
-    }
-  };
+  // ------------ Non-Constant functions -------------
 
+  
+  /**
+   * @notice Programmatically switch Metamask network
+   */
   async function switchNetwork() {
     // Add chain to metamask if needed
     try {
@@ -91,6 +92,19 @@ const Home = () => {
     });
   }
 
+
+  // ------------ Constant functions -------------
+
+  /**
+   * @notice Format address to `0x1234...5678`
+   */
+  const formatAddress = (address: any) => {
+    if (account) {
+      return address.slice(0, 4) + "..." + address.slice(-4);
+    }
+  };
+
+  // Escape modal
   document.addEventListener("keydown", (e: any) => {
     if (e.key === "Escape") {
       closeWalletModalHandler();
