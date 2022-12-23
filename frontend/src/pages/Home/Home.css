@@ -1,0 +1,28 @@
+.page-home { 
+  width: 100%;
+}
+.page-component__header { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.page-component__header__connect-btn { 
+  padding: var(--padding-medium) var(--padding-large);
+  background-color: var(--color-purple);
+  border-radius: var(--border-radius-medium);
+  min-width: 140px;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.page-component__header__connect-btn:hover { 
+  cursor: pointer;
+  background-color: var(--color-blue);
+}
+
+h2 { 
+  padding: 0px;
+  margin: 0px;
+}

@@ -1,0 +1,58 @@
+/**
+ * @notice Modal
+ */
+.component-modal {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 101;
+  transition-duration: 0.3s;
+}
+
+.component-modal__modal {
+  width: 100%;
+  max-width: 470px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: black;
+  border-radius: 10px;
+  border: 2px solid var(--color-purple);
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 50px var(--color-purple);
+}
+
+.component-modal__modal__item {
+  padding: 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid var(--color-purple);
+  border-radius: 10px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  background-color: black;
+}
+
+.component-modal__modal__item:hover {
+  background-color: var(--color-purple);
+}
+
+.component-modal__modal__item__img {
+  height: 50px;
+  width: 50px;
+}
+
+.component-modal__modal__item__text {
+  color: white;
+  font-size: 18px;
+}

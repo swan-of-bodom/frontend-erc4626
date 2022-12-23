@@ -1,0 +1,46 @@
+:root {
+  /* Flex/Grid Gap */
+  --gap-small: 8px;
+  --gap-medium: 16px;
+  --gap-large: 24px;
+
+  /* Padding */
+  --padding-extra-small: 4px;
+  --padding-small: 8px;
+  --padding-small-half: 12px;
+  --padding-medium: 16px;
+  --padding-large: 24px;
+  --padding-extra-large: 32px;
+
+  /* Palette */
+  --color-dark: #41463d;
+  --color-purple: #9d8df1;
+  --color-blue: #b8cdf8;
+  --color-mint: #95f2d9;
+  --color-light: #1cfeba;
+  --color-white: whitesmoke;
+  --color-pink: #D64550;
+
+  /* Border-radius */
+  --border-radius-small: 4px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 12px;
+  --border-radius-extra-large: 28px;
+}
+
+body { 
+  background-color: #282c34;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: whitesmoke;
+  padding: 24px;
+  margin: auto;
+  font-size: 18px;
+  max-width: 1400px;
+}
+
