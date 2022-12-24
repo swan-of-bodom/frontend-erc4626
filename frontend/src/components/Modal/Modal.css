@@ -15,6 +15,10 @@
   transition-duration: 0.3s;
 }
 
+.component-modal__close:hover { 
+  cursor: pointer;
+}
+
 .component-modal__modal {
   width: 100%;
   max-width: 470px;
@@ -22,12 +26,12 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  background-color: black;
-  border-radius: 10px;
+  background-color: #111;
+  border-radius: var(--border-radius-medium);
   border: 2px solid var(--color-purple);
   padding: 30px;
   box-sizing: border-box;
-  box-shadow: 0px 0px 50px var(--color-purple);
+  box-shadow: 0px 0px 120px var(--color-blue);
 }
 
 .component-modal__modal__item {
@@ -37,14 +41,14 @@
   align-items: center;
   gap: 20px;
   border: 2px solid var(--color-purple);
-  border-radius: 10px;
+  border-radius: var(--border-radius-medium);
   transition-duration: 0.5s;
   cursor: pointer;
-  background-color: black;
+  background-color: #111;
 }
 
 .component-modal__modal__item:hover {
-  background-color: var(--color-purple);
+  background-color: var(--color-blue);
 }
 
 .component-modal__modal__item__img {

@@ -6,6 +6,7 @@ extends:
   - plugin:react/recommended
   - plugin:@typescript-eslint/recommended
 parser: '@typescript-eslint/parser'
+printWidth: 120
 parserOptions:
   ecmaFeatures:
     jsx: true

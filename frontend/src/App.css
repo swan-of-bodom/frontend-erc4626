@@ -15,21 +15,18 @@
   /* Palette */
   --color-dark: #41463d;
   --color-purple: #9d8df1;
-  --color-blue: #b8cdf8;
+  --color-blue: #A1B3D9;
   --color-mint: #95f2d9;
   --color-light: #1cfeba;
   --color-white: whitesmoke;
   --color-pink: #D64550;
+  --color-light-pink: #EBA2A8;
 
   /* Border-radius */
   --border-radius-small: 4px;
   --border-radius-medium: 8px;
   --border-radius-large: 12px;
   --border-radius-extra-large: 28px;
-}
-
-body { 
-  background-color: #282c34;
 }
 
 .App {
@@ -42,5 +39,35 @@ body {
   margin: auto;
   font-size: 18px;
   max-width: 1400px;
+  box-sizing: border-box;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input:active,
+input:focus {
+  outline: none;
+}
+
+input {
+  background-color: var(--color-dark);
+  border: 0px;
+  color: var(--cygwhite);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: var(--padding-medium);
+  font-size: 24px;
+  text-overflow: ellipsis;
 }
 

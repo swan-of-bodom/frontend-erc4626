@@ -21,10 +21,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.MyVaultTokenERC4626__factory>;
     getContractFactory(
-      name: "VaultTokenERC4626",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.VaultTokenERC4626__factory>;
-    getContractFactory(
       name: "ERC20",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ERC20__factory>;
@@ -59,11 +55,6 @@ declare module "hardhat/types/runtime" {
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.MyVaultTokenERC4626>;
-    getContractAt(
-      name: "VaultTokenERC4626",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.VaultTokenERC4626>;
     getContractAt(
       name: "ERC20",
       address: string,
