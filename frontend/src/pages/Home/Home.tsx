@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 // Web3React
 import { useWeb3React } from "@web3-react/core";
 import { InjectedConnector } from "@web3-react/injected-connector";
-import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
+// import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 
 // Ethers
 import { ethers, BigNumber } from "ethers";
@@ -86,16 +86,15 @@ const Home = () => {
 
   /** @notice Connect WalletConnect - Will not work on Localhost */
   const connectWalletConnect = () => {
-    const RPC_URLS = {
-      1: "https://mainnet.infura.io/v3/dd8c4f3d11b34b88bc14626e1fd02739",
-    };
-
-    const walletConnectConnector = new WalletConnectConnector({
-      rpc: RPC_URLS,
-      bridge: "https://bridge.walletconnect.org",
-      qrcode: true,
-    });
-    activate(walletConnectConnector);
+    // const RPC_URLS = {
+    //   1: "https://mainnet.infura.io/v3/dd8c4f3d11b34b88bc14626e1fd02739",
+    // };
+    // const walletConnectConnector = new WalletConnectConnector({
+    //   rpc: RPC_URLS,
+    //   bridge: "https://bridge.walletconnect.org",
+    //   qrcode: true,
+    // });
+    // activate(walletConnectConnector);
   };
 
   // ------------ Constant functions -------------
@@ -284,6 +283,13 @@ const Home = () => {
     }
   }, [active, library, account]);
 
+  /** @notice Copy to clipboard */
+  const copyText = (e: any) => {
+    e.target.id === "tooltip-token"
+      ? navigator.clipboard.writeText(MY_VAULT_TOKEN_ADDRESS)
+      : navigator.clipboard.writeText(ERC4626_VAULT_ADDRESS);
+  };
+
   return (
     <div className="page-home">
       <Modal isOpen={isWalletModalOpen} closeModalHandler={closeWalletModalHandler}>
@@ -314,7 +320,7 @@ const Home = () => {
       </Modal>
       <header className="page-component__header">
         <div className="page-component__header__logo">
-          <h2>Hyoga Vault Token</h2>
+          <h2>ERC4626 VAULT</h2>
         </div>
         <div className="page-component__header__userinfo">
           <div className="page-component__header__network-btn" onClick={() => switchNetwork()}>
@@ -395,7 +401,13 @@ const Home = () => {
                 </div>
               </div>
               <div>&nbsp;</div>
-              <div>
+              <div className="page-component__main__input__btns">
+                <div
+                  className="page-component__main__input__deposit-btn"
+                  onClick={() => depositAssets()}
+                >
+                  Approve
+                </div>
                 <div
                   className="page-component__main__input__deposit-btn"
                   onClick={() => depositAssets()}
@@ -495,7 +507,15 @@ const Home = () => {
             </div>
             <div className="page-component__contract-data__row">
               <div>Asset</div>
-              <div>{formatContractAddress(MY_VAULT_TOKEN_ADDRESS)}</div>
+              <div className="page-component__main__actions-bal" onClick={e => copyText(e)} id="tooltip-token">
+                {formatContractAddress(MY_VAULT_TOKEN_ADDRESS)}
+              </div>
+            </div>
+            <div className="page-component__contract-data__row">
+              <div>Vault</div>
+              <div className="page-component__main__actions-bal" onClick={e => copyText(e)} style={{ cursor: "pointer" }}>
+                {formatContractAddress(ERC4626_VAULT_ADDRESS)}
+              </div>
             </div>
             <div className="page-component__contract-data__row">
               <div>Total Assets</div>

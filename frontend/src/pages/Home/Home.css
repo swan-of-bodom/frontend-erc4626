@@ -164,6 +164,7 @@
   border-radius: var(--border-radius-medium);
   transition: background-color 0.3s;
   justify-content: center;
+  width: 100%;
 }
 
 .page-component__main__input__deposit-btn:hover {
@@ -224,4 +225,9 @@
   padding: var(--padding-small) var(--padding-medium);
   display: flex;
   justify-content: space-between;
+}
+
+.page-component__main__input__btns { 
+  display: flex;
+  gap: var(--gap-medium);
 }
