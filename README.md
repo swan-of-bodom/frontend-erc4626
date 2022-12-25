@@ -1,4 +1,4 @@
-# Frontend for ERC4626 vaults using OpenZeppelin implementation
+## Frontend for ERC4626 vaults using OpenZeppelin implementation
 
 ```
 git clone https://github.com/0xHyoga/frontend-erc4626`
