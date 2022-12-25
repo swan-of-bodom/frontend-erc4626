@@ -1,13 +1,17 @@
-# Sample Hardhat Project
+# Frontend for ERC4626 vaults using OpenZeppelin implementation
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
 ```
+git clone https://github.com/0xHyoga/frontend-erc4626`
+
+cd ./frontend-erc4626 && npm install
+
+cd ./frontend-erc4626/frontend && npm install
+
+npx hardhat node
+
+npx hardhat run ./deployVault.ts --network localhost
+
+npm start
+```
+
+Note: The vault deploys and assigns 100 ERC20 tokens to 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266 so add to Metamask
