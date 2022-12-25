@@ -15,12 +15,13 @@
   /* Palette */
   --color-dark: #41463d;
   --color-purple: #9d8df1;
-  --color-blue: #A1B3D9;
+  --color-blue: #a1b3d9;
   --color-mint: #95f2d9;
   --color-light: #1cfeba;
   --color-white: whitesmoke;
-  --color-pink: #D64550;
-  --color-light-pink: #EBA2A8;
+  --color-pink: #d64550;
+  --color-light-pink: #eba2a8;
+  --color-yellow: #e1f18d;
 
   /* Border-radius */
   --border-radius-small: 4px;
@@ -29,17 +30,13 @@
   --border-radius-extra-large: 28px;
 }
 
-.App {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: whitesmoke;
-  padding: 24px;
-  margin: auto;
-  font-size: 18px;
-  max-width: 1400px;
-  box-sizing: border-box;
+h2 {
+  padding: 0px;
+  margin: 0px;
+}
+
+p {
+  margin: var(--padding-small);
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -50,7 +47,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -68,5 +65,18 @@ input {
   box-sizing: border-box;
   font-size: 24px;
   text-overflow: ellipsis;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: whitesmoke;
+  padding: 24px;
+  margin: auto;
+  font-size: 18px;
+  max-width: 1400px;
+  box-sizing: border-box;
 }
 

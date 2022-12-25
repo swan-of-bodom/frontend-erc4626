@@ -12,12 +12,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-h2 { 
-  padding: 0px;
-  margin: 0px;
-}
-
-p { 
-  margin: var(--padding-small);
-}

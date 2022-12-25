@@ -20,9 +20,12 @@ root.render(
   <React.StrictMode>
     <Web3ReactProvider getLibrary={getLibrary}>
       <ToastContainer 
-        theme="dark"
         pauseOnHover={false}
+        autoClose={3000}
+        newestOnTop={true}
         pauseOnFocusLoss={false}
+        position="top-left"
+        closeOnClick
       />
       <App />
     </Web3ReactProvider>
